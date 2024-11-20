@@ -1,7 +1,11 @@
 const express = require("express");
+const cors = require("cors");
 const { MongoClient } = require("mongodb");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
+// Habilita CORS para todas las rutas
+app.use(cors());
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_CLUSTER}/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
