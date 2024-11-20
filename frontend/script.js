@@ -7,7 +7,7 @@ function updateCharCount() {
 }
 function sendData() {
   const input = document.getElementById("limitedInput").value;
-  fetch("https://banner-endpoint.onrender.com", {
+  fetch("https://banner-endpoint.onrender.com/save-input", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ inputData: input }),
