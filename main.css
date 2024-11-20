@@ -1,0 +1,189 @@
+html *,
+html :after,
+html :before {
+    box-sizing: inherit;
+}
+
+html * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Define CircularLight font */
+@font-face {
+    font-family: 'CircularLight';
+    src: url('fonts/CircularStd-Light.otf') format('opentype');
+}
+
+/* Define MonumentExtendedRegular font */
+@font-face {
+    font-family: 'MonumentExtendedRegular';
+    src: url('fonts/MonumentExtended-Regular.otf') format('opentype');
+}
+
+/* Apply MonumentExtendedRegular font to h1 elements */
+h1 {
+    font-family: 'MonumentExtendedRegular', sans-serif;
+}
+
+/* Apply CircularLight font to the body */
+body {
+    font-family: 'CircularLight', sans-serif;
+}
+
+.hero-converge {
+    background-color: transparent;
+    background-repeat: repeat-x;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.parallaxvideo .parallaxvideo__wrapper figure {
+    margin: 0;
+    position: relative;
+}
+
+.parallaxvideo {
+    bottom: 0;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    right: 0;
+    width: auto;
+    z-index: -9999;
+}
+
+@media (min-width: 992px) {
+    .parallaxvideo .parallaxvideo__wrapper {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+    .parallaxvideo .parallaxvideo__wrapper figure video {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin: 2rem;
+}
+
+p {
+    margin: 0.25rem;
+    font-size: 18px;
+}
+
+span {
+    font-size: 22px;
+    margin-top: 2rem;
+    display: block;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+input {
+    margin: 2rem 0rem 12px 0rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 22px;
+    color: #fff;
+    background-color: #0000;
+    border: 1px solid #fff;
+    border-radius: 8px;
+}
+
+.char-counter {
+    font-size: 0.75rem;
+    color: #ababab;
+}
+
+p strong {
+    font-weight: bold;
+    font-size: 2.025rem;
+}
+
+.hero-converge .hero-converge__linkWrapper {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.hero-converge .hero-converge__link {
+    margin-top: 3rem
+}
+
+.hero-banner .hero-banner__link {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.link::after {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAABHNCSVQICAgIfAhkiAAAAMFJREFUOE/l1NERwiAMBuCEzmEPnaA6QUdwA91AN1An0VEYQTfoCE5AJN7Ru56QpH01TzxwHwF+QEjVbnZXILrweHEh3vCPMOs5tevtI809FOfnM7NgIsSAFVMhK1aCCOCFiCHF6TTuSuusBjVEfXTuPMmmhEnQMDzfP0GvYRpUDHoJs0AmzAqp2BxIxOZCVWwJVMVWvjumAN5z+DiQnCO+fumZVaORQSvEi3jfcXD7vKCLMXw/R64E7huAoHUkdfsBmz+g1rhnu3wAAAAASUVORK5CYII=");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: 1rem;
+    margin-left: 0.5rem;
+    width: 1rem
+}
+
+.hero-converge .hero-converge__link .button-link .button-globant {
+    background: #fff;
+    border: none;
+    border-radius: 1.2rem;
+    color: #000;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase
+}
+
+.hero-converge .hero-converge__link .button-link .button-globant:hover {
+    background: linear-gradient(254deg, #25ef99 0%, #4aee64 100%)
+}
+
+.hero-converge .hero-converge__link .button-link .button-globant:focus {
+    background: #25ef99
+}
+
+.hero-converge .hero-converge__link .button-link .button-globant::after {
+    content: unset
+}
+
+/* .button-link {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button-link a {
+    color: white;
+    text-decoration: none;
+} */

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>Landing Acceso a Red</title>
+  </head>
+  <body>
+    <main>
+      <section
+        id="hero-converge"
+        class="hero-banner hero-converge"
+        style="
+          background-image: url('https://statics.globant.com/microsites/public/styles/webp/public/2023-12/1-hero-gradient-1920.png.webp?itok=ki7zR7iT');
+        ">
+        <div class="parallaxvideo">
+          <div class="parallaxvideo__wrapper">
+            <figure>
+              <video loop autoplay playsinline muted>
+                <source
+                  src="https://statics.globant.com/microsites/public/2024-08/hero-converge-2024-compressed.mp4" />
+              </video>
+            </figure>
+          </div>
+        </div>
+        <div class="text-overlay">
+          <h1>Bienvenido a la Red de INCOM</h1>
+          <p>
+            Recuerda que esta Red es <strong>exclusivamente</strong> para uso de
+            WhatsApp.
+          </p>
+          <p>Cualquier uso inadecuado será motivo de blockeo de la Red.</p>
+          <span>Escribe tu número de usuario para acceder a la Red.</span>
+          <input
+            type="text"
+            id="limitedInput"
+            maxlength="18"
+            oninput="updateCharCount()" />
+          <div class="char-counter" id="charCounter">
+            Límite máximo 18 caracteres
+          </div>
+          <div class="hero-banner__link hero-converge__link">
+            <!-- <button
+              class="button-link hydrated"
+              buttonicon-class="link"
+              button-href="#converge-form"
+              button-linktext="Register now"
+              ><a
+                href="#converge-form"
+                class="button-globant link button-globant-undefined"
+                >Conectar</a
+              ></button
+            > -->
+            <button class="button-link hydrated" onclick="sendData()">
+              <a class="button-globant link button-globant-undefined"
+                >Conectar</a
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      function updateCharCount() {
+        const input = document.getElementById("limitedInput");
+        const currentLength = input.value.length;
+        document.getElementById(
+          "charCounter"
+        ).textContent = `Se han escrito ${currentLength} de 18 caracteres`;
+      }
+      function sendData() {
+        const input = document.getElementById("limitedInput").value;
+        fetch("http://localhost:3000/save-input", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ inputData: input }),
+        })
+          .then((response) => response.text())
+          .then((data) => {
+            console.log(data);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+    </script>
+  </body>
+</html>
