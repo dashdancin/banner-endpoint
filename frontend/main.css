@@ -121,17 +121,17 @@ p strong {
     font-size: 2.025rem;
 }
 
-.hero-converge .hero-converge__linkWrapper {
+.hero-converge__linkWrapper {
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
-.hero-converge .hero-converge__link {
+.hero-converge__link {
     margin-top: 3rem
 }
 
-.hero-banner .hero-banner__link {
+.hero-banner__link {
     align-items: center;
     display: flex;
     justify-content: center
@@ -147,7 +147,7 @@ p strong {
     width: 1rem
 }
 
-.hero-converge .hero-converge__link .button-link .button-globant {
+.button-globant {
     background: #fff;
     border: none;
     border-radius: 1.2rem;
@@ -162,28 +162,14 @@ p strong {
     text-transform: uppercase
 }
 
-.hero-converge .hero-converge__link .button-link .button-globant:hover {
+.button-globant:hover {
     background: linear-gradient(254deg, #25ef99 0%, #4aee64 100%)
 }
 
-.hero-converge .hero-converge__link .button-link .button-globant:focus {
+.button-globant:focus {
     background: #25ef99
 }
 
-.hero-converge .hero-converge__link .button-link .button-globant::after {
+.button-globant::after {
     content: unset
 }
-
-/* .button-link {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-}
-
-.button-link a {
-    color: white;
-    text-decoration: none;
-} */
