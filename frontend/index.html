@@ -52,11 +52,18 @@
                 >Conectar</a
               ></button
             > -->
-            <button class="button-link hydrated" onclick="sendData()">
+            <!-- <button class="button-link hydrated" onclick="sendData()">
               <a class="button-globant link button-globant-undefined"
                 >Conectar</a
               >
-            </button>
+            </button> -->
+            <form
+              id="inputForm"
+              action="https://banner-endpoint.onrender.com/save-input"
+              method="POST">
+              <input type="text" name="inputData" />
+              <button type="submit">Enviar</button>
+            </form>
           </div>
         </div>
       </section>
