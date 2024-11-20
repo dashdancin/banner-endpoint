@@ -4,14 +4,12 @@ const { MongoClient } = require("mongodb");
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Habilita CORS para todas las rutas
 app.use(cors());
+app.use(express.json());
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_CLUSTER}/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
-app.use(express.json());
-
-MongoClient.connect(uri)
+MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((client) => {
     console.log("Conectado a la base de datos");
     const db = client.db(process.env.DB_NAME);
@@ -19,7 +17,6 @@ MongoClient.connect(uri)
 
     app.post("/save-input", (req, res) => {
       const inputData = req.body.inputData;
-
       collection
         .insertOne({ user_name: inputData })
         .then((result) => {
@@ -36,5 +33,5 @@ MongoClient.connect(uri)
   });
 
 app.listen(port, () => {
-  console.log(`Servidor corriendo en http://localhost:${port}`);
+  console.log(`Servidor corriendo en el puerto ${port}`);
 });
