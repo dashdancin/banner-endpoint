@@ -12,7 +12,12 @@ function sendData() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ inputData: input }),
   })
-    .then((response) => response.text())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.text();
+    })
     .then((data) => {
       console.log(data);
     })

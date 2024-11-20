@@ -32,7 +32,7 @@
           </p>
           <p>Cualquier uso inadecuado será motivo de blockeo de la Red.</p>
           <span>Escribe tu número de usuario para acceder a la Red.</span>
-          <input
+          <!-- <input
             type="text"
             id="limitedInput"
             maxlength="18"
@@ -41,7 +41,7 @@
             Límite máximo 18 caracteres
           </div>
           <div class="hero-banner__link hero-converge__link">
-            <!-- <button
+            <button
               class="button-link hydrated"
               buttonicon-class="link"
               button-href="#converge-form"
@@ -51,20 +51,14 @@
                 class="button-globant link button-globant-undefined"
                 >Conectar</a
               ></button
-            > -->
-            <!-- <button class="button-link hydrated" onclick="sendData()">
+            >
+            <button class="button-link hydrated" onclick="sendData()">
               <a class="button-globant link button-globant-undefined"
                 >Conectar</a
               >
-            </button> -->
-            <form
-              id="inputForm"
-              action="https://banner-endpoint.onrender.com/save-input"
-              method="POST">
-              <input type="text" name="inputData" />
-              <button type="submit">Enviar</button>
-            </form>
-          </div>
+            </button>
+          </div> -->
+          <div class="input-container"><input type="text" id="limitedInput" maxlength="18" oninput="updateCharCount()"> <div class="char-counter" id="charCounter">Se han escrito 0 de 18 caracteres</div> <button class="button-link" onclick="sendData()">Conectar</button>
         </div>
       </section>
     </main>
