@@ -7,7 +7,7 @@ function updateCharCount() {
 }
 function sendData() {
   const input = document.getElementById("limitedInput").value;
-  fetch("https://red-local-it4u.netlify.app/save-input", {
+  fetch("https://banner-endpoint.onrender.com", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ inputData: input }),
