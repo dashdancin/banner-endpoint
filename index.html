@@ -71,7 +71,7 @@
       }
       function sendData() {
         const input = document.getElementById("limitedInput").value;
-        fetch("http://localhost:3000/save-input", {
+        fetch("https://red-local-it4u.netlify.app/save-input", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ inputData: input }),
